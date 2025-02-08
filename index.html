@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yağmur Efekti</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <script src="script.js"></script>
+    <button class="bounce-button" onclick="openVideo()">İZLE</button>
+
+      <!-- Video Modal -->
+      <div id="videoModal" class="video-modal">
+        <div class="video-container">
+            <video id="videoPlayer" controls></video>
+            <button class="nav-button prev" onclick="changeVideo(-1)">&#10094;</button>
+            <button class="nav-button next" onclick="changeVideo(1)">&#10095;</button>
+            <button class="close-button" onclick="closeVideo()">✖</button>
+        </div>
+    </div>
+</body>
+</html>
