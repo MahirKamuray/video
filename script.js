@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.width = "100vw";
         document.body.style.height = "100vh";
     });
-    
+
     const images = [
         "1.jpeg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg",
         "6.jpeg", "7.jpeg", "8.jpeg", "9.jpeg", "10.jpeg"
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         img.classList.add("falling-image");
         if (isHeart) img.classList.add("falling-heart");
 
-        img.style.left = Math.random() * window.innerWidth + "px";
+        img.style.left = Math.random() * (window.innerWidth - 50) + "px"; // Sayfa dışına taşmasını önler
         img.style.top = "-10vh";
         img.style.setProperty("--random-x", (Math.random() * 100 - 50) + "px");
         img.style.animation = `fall ${6 + Math.random() * 4}s linear`;

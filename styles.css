@@ -3,8 +3,9 @@ body {
     padding: 0;
     background: url('Mainpage/BackGround/background.jpeg') no-repeat center center fixed;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    overflow-x: hidden; /* Yatay taşmayı engeller */
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -16,9 +17,10 @@ body {
 }
 
 .falling-image {
-    position: absolute;
+    position: fixed;
     top: -10vh;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 1cm; /* Sabit yükseklik */
     width: 1cm; /* Sabit genişlik */
     pointer-events: none;
